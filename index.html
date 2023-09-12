@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Resume Natalia Vozhdaeva</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+  <link rel="icon"
+        href="./assets/img/fav-icon.ico">
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="header-container">
+      <nav class="navigation">
+        <ul class="list navigation-list">
+          <li class="navigation-item"><a class="link navigation-link"
+               href="#skills">Skills</a></li>
+          <li class="navigation-item"><a class="link navigation-link"
+               href="#about">About me</a></li>
+          <li class="navigation-item"><a class="link navigation-link"
+               href="#experience">Projects</a></li>
+          <li class="navigation-item"><a class="link navigation-link"
+               href="#education">Education</a></li>
+          <li class="navigation-item"><a class="link navigation-link"
+               href="#code">Code example</a></li>
+        </ul>
+        <a class="link btn language-btn">RU</a>
+        <div class="popup">Something has gone wrong, but I'm already working on it. Please, try again later or write me, if you need it right now
+        </div>
+      </nav>
+      <div class="summary-container">
+        <img class="summary-photo img"
+             src="./assets/img/1.png"
+             alt="It's me"
+             title="Hi!"
+             width="300">
+        <div class="summary-text">
+          <h1 class="header-title summary-title">Hi, I'm Natalia!</h1>
+          <h2 class="header-subtitle">Frontend Developer / HTML-coder</h2>
+          <div class="header-text summary">
+            I'm an HTML, CSS, and Javascript developer with experience in OOP. Have been developing since
+            2020. I was creating Single Page Application using the MVP, adaptive, and cross-browser layouts.
+            Moreover, I have a bit of experience with React and Angular and continue my learning. I'm a quick
+            learner, who has a high attention to details and accuracy of work.
+            Adaptable, driven, and responsible.
+          </div>
+        </div>
+      </div>
+      <ul class="list contact-list">
+        <li class="contact-item">
+          <a class="link contact-link linkedin"
+             href="https://www.linkedin.com/in/nataliavozhdaeva/"
+             aria-label="contact-linkedin"></a>
+        </li>
+        <li class="contact-item">
+          <a class="link contact-link github"
+             href="https://github.com/NataliaVozhdaeva/"
+             aria-label="contact-github"></a>
+        </li>
+        <li class="contact-item">
+          <a class="link contact-link mail"
+             href="mailto:NataliaVVozhdaeva@gmail.com"
+             aria-label="contact-mail"></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main-container">
+      <div class="skills-wrapper">
+        <section class="skills"
+                 id="skills">
+          <h2 class="section-title skills-title">Skills</h2>
+          <ul class="list skills-list">
+            <li class="skills-item">HTML, CSS (Flex, Grid)</li>
+            <li class="skills-item">Javascript</li>
+            <li class="skills-item">SCSS, PUG;</li>
+            <li class="skills-item">Gulp, webpack</li>
+            <li class="skills-item">GIT</li>
+            <li class="skills-item">BEM</li>
+            <li class="skills-item">OOP</li>
+            <li class="skills-item">Figma, Photoshop</li>
+            <li class="skills-item">
+              <ul class="list languages-list">
+                <li class="languages-item skills-item">
+                  <h4 class="languages-title">Languages:</h4>
+                </li>
+                <li class="languages-item skills-item">English (B1, in progress)</li>
+                <li class="languages-item skills-item">Italian (A1)</li>
+                <li class="languages-item skills-item">Russian (Native)</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="about">
+            <h3 class="section-title about-title"
+                id="about">A little bit more about me</h3>
+            <p>
+              Have a degree in journalism. Began to be interested in programming at
+              school, but at that time we had programming lessons just in a graduate
+              year, and that wasn't enough to enter university. I was trying to study just with the Internet, and
+              in 2020 understood that need a system education, and started courses.
+              Take part in the game "What? Where? When?" (something like “Jeopardy”,
+              but with the team), sort the garbage, inspired by pixel-perfect, which
+              match from the first time, like knitting and cats.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="experience"
+               id="experience">
+        <h3 class="section-title experience-title">My experience</h3>
+        <ul class="list experience-list">
+          <li class="experience-item modal"
+              data-modal="plants">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/plants.png"
+                   alt="Landing for gardening car"
+                   width="600">
+              <figcaption>
+                Plants
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Landing for gardening care</h4>
+            <ul class="list features">
+              <li class="features-item">Mobile burger-menu;</li>
+              <li class="features-item">Custon select in Contact section;</li>
+              <li class="features-item">Focus canging according button's click in Service section;</li>
+              <li class="features-item">Accordion in Price section;</li>
+              <li class="features-item">Adaptive (tablet, mobile) and liquid layout;</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/plants"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/plants/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="git-search">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/git-search.png"
+                   alt="helper to find github repo"
+                   width="600">
+              <figcaption>
+                GithubRepo-searcher
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Block, which can help to find github repo, includes entered substring</h4>
+            <ul class="list features">
+              <li class="features-item">Is's using GitHub REST API;</li>
+              <li class="features-item">If you input uncorrect - create "mistake"-massage</li>
+              <li class="features-item">Have got a validation</li>
+              <li class="features-item">Enter your keyword into input;</li>
+              <li class="features-item">Get results!</li>
+              <li class="features-item">Search starts by click on the search-button and by press "Enter";</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/taking-reps"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/taking-reps/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="elite-fire">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/elite-fire.png"
+                   alt="Landing for fireplace for home"
+                   width="600">
+              <figcaption>
+                Elite fire
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Landing "Elite Fire" (fireplace for home)</h4>
+            <ul class="list features">
+              <li class="features-item">gulp build system;</li>
+              <li class="features-item">svg-sprite (by gulp);</li>
+              <li class="features-item">custom input-range, adio-buttons, checkboxes;</li>
+              <li class="features-item">multiple backgrounds;</li>
+              <li class="features-item">custom fonts;</li>
+              <li class="features-item">adaptive and liquid layout;</li>
+              <li class="features-item">flex, SCSS;</li>
+              <li class="features-item">semantic HTML;</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/eliteFire"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/eliteFire/dist/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="comments-form">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/comments-form.png"
+                   alt="comments-form"
+                   width="600">
+              <figcaption>
+                Comments-form
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Section for adding comments and edit comment's list.</h4>
+            <ul class="list features">
+              <li class="features-item">To write your own comment: enter your name into name-input;</li>
+              <li class="features-item">enter text into text-area;</li>
+              <li class="features-item">choose date or skip it (if you skip date will be written automatically)</li>
+              <li class="features-item">click on the submit-batton or press "Enter";</li>
+              <li class="features-item">To edit comment's list:
+                click on heart-icon for add/remove like</li>
+              <li class="features-item">fclick on bit-icon for delete any comment.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/comments-form"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/comments-form/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="bikes">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/bikes.png"
+                   alt="landing for bike-shop"
+                   width="600">
+              <figcaption>
+                Bike shop
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Test task</h4>
+            <ul class="list features">
+              <li class="features-item">Change tabs on click;</li>
+              <li class="features-item">gulp + webpack;</li>
+              <li class="features-item">flex, grid, position;</li>
+              <li class="features-item">SCSS</li>
+              <li class="features-item">desktop and mobile layouts (and liquid between them);</li>
+              <li class="features-item">It have got input validation and possibility add more then one input.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/test-bikes"
+                 target="_blank"> Show github
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="cinemaddict">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/cinemaddict.png"
+                   alt="SPA for Cinemaddict"
+                   width="600">
+              <figcaption>
+                Cinemaddict
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">SPA with film collection</h4>
+            <ul class="list features">
+              <li class="features-item">REST API;</li>
+              <li class="features-item">progressive loading;</li>
+              <li class="features-item">
+                "shake effect" for interactive components when the server
+                doesn't respond;
+              </li>
+              <li class="features-item">adding and deleting comments;</li>
+              <li class="features-item">you can filter and sort movies;</li>
+              <li class="features-item">you can create your own rating;</li>
+              <li class="features-item">Moreover a fixed the academy's code.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/Cinemaddict/tree/master"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/Cinemaddict/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="travel">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/travel.png"
+                   alt="page with tour schedule"
+                   width="600">
+              <figcaption>
+                Tour schedule
+              </figcaption>
+            </figure></a>
+            <h4 class="pet-title">Test task</h4>
+            <ul class="list features">
+              <li class="features-item">adaptive layout (mobile first, desktop);</li>
+              <li class="features-item">liquid layout (flex, position);</li>
+              <li class="features-item">if there are too much time-slots and a lack of place in the string,
+                additing slots are hid, the more-button is appears and shows additing slots on click;</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/travel-test/tree/master"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/travel-test/dist/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="portfolio">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/screen2.png"
+                   alt="my portfolio"
+                   width="600">
+              <figcaption>
+                Portfolio
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">My portfolio page</h4>
+            <ul class="list features">
+              <li class="features-item">creating elements by JS;</li>
+              <li class="features-item">page animation by js;</li>
+              <li class="features-item">background animation by css;</li>
+              <li class="features-item">modal windows;</li>
+              <li class="features-item">liquid layout (flex, grid);</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/rsschool-cv/tree/rsschool-cv-html"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/rsschool-cv/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="design">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/design.png"
+                   alt="landing for Design Studio"
+                   width="600">
+              <figcaption>
+                Landing for Design Studio
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Pet-project. Free figma layout, just with desctop version.</h4>
+            <ul class="list features">
+              <li class="features-item">adaptive layout (from mobile to desktop);</li>
+              <li class="features-item">liquid layout (flex, grid, position);</li>
+              <li class="features-item">scroll animation;</li>
+              <li class="features-item">neverending slider (feedback);</li>
+              <li class="features-item">usual slider (examples);</li>
+              <li class="features-item">burger-menu for small screens.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/Design-Studio"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/Design-Studio/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="levelup">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/levelup.png"
+                   alt="landing for dietary supplement"
+                   width="600">
+              <figcaption>Level Up</figcaption>
+            </figure>
+            <h4 class="pet-title">Test-task. Liquid &amp; adaptive layout.</h4>
+            <ul class="list features">
+              <li class="features-item">flex, grid;</li>
+              <li class="features-item">@keyframes animation;</li>
+              <li class="features-item">video-background, gradients;</li>
+              <li class="features-item">burger-menu for small screens;</li>
+              <li class="features-item">countdown timer;</li>
+              <li class="features-item">neverending slider.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/test_level"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/test_level/dist/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="watchStore">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/watchStore.jpg"
+                   alt="landing for watch store"
+                   width="600">
+              <figcaption>Watch store</figcaption>
+            </figure>
+            <h4 class="pet-title">Pet-project. Just descktop version.</h4>
+            <ul class="list features">
+              <li class="features-item">flex, position;</li>
+              <li class="features-item">modal window;</li>
+              <li class="features-item">neverending slider.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/WatchStore"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://nataliavozhdaeva.github.io/WatchStore/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="JD">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/JD.png"
+                   alt="landing for social network"
+                   width="600">
+              <figcaption>
+                Jane Dow
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Pet-project. Social-media page, adaptive layout.</h4>
+            <ul class="list features">
+              <li class="features-item">grid, position;</li>
+              <li class="features-item">custom checkbox;</li>
+              <li class="features-item">css slider;</li>
+              <li class="features-item">form validation;</li>
+              <li class="features-item">interactive elements.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/JaneDoe"
+                 target="_blank"> Show github
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="beautySalon">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/beautySalon.jpg"
+                   alt="landing for beauty salon"
+                   width="600">
+              <figcaption>
+                Beauty salon
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Project from learning, just descktop version.</h4>
+            <ul class="list features">
+              <li class="features-item">flex, position, bootstrap;</li>
+              <li class="features-item">
+                service's tabs switching (plugin, JS);
+              </li>
+              <li class="features-item">modal window for order;</li>
+              <li class="features-item">photo's carousel (@fancybox, JS);</li>
+              <li class="features-item">REST API.</li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/BeautyWorld"
+                 target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                 href="https://determined-swanson-a44406.netlify.app/"
+                 target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+          <li class="experience-item modal"
+              data-modal="crm">
+            <svg class="modal__cross js-modal-close"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24">
+              <path
+                    d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                   src="./assets/img/crm.jpg"
+                   alt="CRM for beauty salon"
+                   width="600">
+              <figcaption>
+                CRM for Beauty salon. React
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Project from learning, just descktop version.</h4>
+            <ul class="list features">
+              <li class="features-item">interaction with the server;</li>
+              <li class="features-item">CRUD-operations;</li>
+              <li class="features-item">
+                choosing a service, date, and master;
+              </li>
+              <li class="features-item">
+                form for adding, deleting, and updating orders.
+              </li>
+            </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                 href="https://github.com/NataliaVozhdaeva/BeautyWorld/tree/crm1"
+                 target="_blank"> Show github
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="overlay"
+             id="overlay-modal"></div>
+      </section>
+
+      <section class="education"
+               id="education">
+        <h3 class="section-title education-title">Education</h3>
+        <ul class="list education-list">
+          <li class="education-item">
+            <h4 class="education-item-title">RSScool</h4>
+            <p class="education-duration">12.2022 - right now</p>
+            <p class="item-text education-text">
+              New skills will be here!!!
+            </p>
+          </li>
+          <li class="education-item">
+            <h4 class="education-item-title">HTML-academy</h4>
+            <p class="education-duration">04.2022-06.2022</p>
+            <p class="item-text education-text">
+              OOP, architecture patterns, class components, working with
+              someone else's code.
+            </p>
+          </li>
+          <li class="education-item">
+            <h4 class="education-item-title">Rubius Academy</h4>
+            <p class="education-duration">02.2021 - 04.2021</p>
+            <p class="item-text education-text">
+              Gulp, webpack, React, CRUD operations. Async server's work
+              (fetch).
+            </p>
+          </li>
+          <li class="education-item">
+            <h4 class="education-item-title">
+              Tomsk State University of Control Systems and&nbsp;Radioelectronics
+            </h4>
+            <p class="education-duration">01.2020 - 04.2020</p>
+            <p class="item-text education-text">
+              HTML5 and CSS3, javaScript, jQuery, Canvas. Implementation of
+              complex visual effects: parallax, animations;
+            </p>
+          </li>
+          <li class="education-item">
+            <h4 class="education-item-title">
+              Tomsk State University
+            </h4>
+            <p class="education-duration">2005 - 2010</p>
+            <p class="item-text education-text">
+              Masters degree of journalism
+            </p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a class="link footer-link"
+         href="https://rs.school/js/"
+         aria-label="logo RSScool">
+        <img class="logo footer-logo"
+             src="./assets/img/logo_rs_school.svg"
+             alt="logo RSScool"
+             width="100">
+      </a>
+      <div class="btn-container">
+        <a class="link btn footer-btn downloadcv"
+           href="./assets/docs/Frontend_Natalia Vozhdaeva.pdf"
+           target="_blank"
+           download>Download CV in .pdf
+        </a>
+        <a class="link btn footer-btn github"
+           href="https://github.com/NataliaVozhdaeva"
+           target="_blank">Look at GitHub
+        </a>
+        <a class="link btn footer-btn email"
+           href="mailto:NataliaVVozhdaeva@gmail.com"
+           target="_blank">Mail me!
+        </a>
+      </div>
+      <code class="code"
+            id="code">
+            function toCamelCase(str){<br>
+              return str.split(/[-_]/).map(function (entry, index) {<br>
+                return index === 0 ? entry : entry.charAt(0).toUpperCase() + entry.slice(1)<br>
+              }).join('');
+            }
+        </code>
+      <aside class="aside">
+        <p class="aside-text">2022</p>
+        <a class="link special-link"
+           target="_blank"
+           href="https://icons8.com">Special thanks for icons to "icons8"</a>
+      </aside>
+    </div>
+  </footer>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
