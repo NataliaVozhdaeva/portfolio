@@ -3,16 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume Natalia Vozhdaeva</title>
 
-  <link rel="stylesheet"
-        href="style.css">
-  <link rel="icon"
-        href="./assets/img/fav-icon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./assets/img/fav-icon.ico">
 </head>
 
 <body class="body">
@@ -45,11 +41,13 @@
           <h1 class="header-title summary-title">Hi, I'm Natalia!</h1>
           <h2 class="header-subtitle">Frontend Developer / HTML-coder</h2>
           <div class="header-text summary">
-            I'm an HTML, CSS, and Javascript developer with experience in OOP. Have been developing since
-            2020. I was creating Single Page Application using the MVP, adaptive, and cross-browser layouts.
-            Moreover, I have a bit of experience with React and Angular and continue my learning. I'm a quick
-            learner, who has a high attention to details and accuracy of work.
-            Adaptable, driven, and responsible.
+            I'm a Front-end Developer with experience in HTML, CSS, Javascript and TypeScript – Including OOP and the ability to
+            deliver pixel-perfect and adaptive layouts. Created more than 10 landing pages (with interactive elements, such as pagination,
+            carousels, burger menus, virtual keyboard, etc), two apps using React, two SPA with pure JS and two with TS, developed a lot
+            of single fragment stuff, such as comment-form, goods cards, accordion, etc.
+            Was a member of a teams, which developed construction investment application and crypto startup.
+            I have been developing since 2020. Have a bit of experience with React and Angular. Love coding, love work, and love to
+            communicate. I'm a quick learner and have got high attention to detail. Adaptable, driven, and responsible.
           </div>
         </div>
       </div>
@@ -80,7 +78,7 @@
           <h2 class="section-title skills-title">Skills</h2>
           <ul class="list skills-list">
             <li class="skills-item">HTML, CSS (Flex, Grid)</li>
-            <li class="skills-item">Javascript</li>
+            <li class="skills-item">JavaScript, TypeScript</li>
             <li class="skills-item">SCSS, PUG;</li>
             <li class="skills-item">Gulp, webpack</li>
             <li class="skills-item">GIT</li>
@@ -113,10 +111,137 @@
         </section>
       </div>
 
-      <section class="experience"
-               id="experience">
+      <section class="experience" id="experience">
         <h3 class="section-title experience-title">My experience</h3>
         <ul class="list experience-list">
+          <li class="experience-item modal" data-modal="keyboard">
+            <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                 src="./assets/img/keyboard.png"
+                 alt="virtual keyboard"
+                 width="600">
+              <figcaption>
+                Virtual keyboard
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Virtual keyboard</h4>
+            <ul class="list features">
+              <li class="features-item">Dynamic rendering (ctrl+alt changes language, shift adds special symbols);</li>
+              <li class="features-item">DOM-evemts;</li>
+              <li class="features-item">Syncronization real and virtual keyboard</li>
+              <li class="features-item">Css-animation effects;</li>
+            </ul>
+              <div class="experience-links">
+                <a class="link pet-link"
+                  href="https://github.com/NataliaVozhdaeva/rss/tree/minesweeper"
+                  target="_blank"> Show github
+                </a>
+                <a class="link pet-link"
+                  href="https://nataliavozhdaeva.github.io/rss/minesweeper/"
+                  target="_blank"> Show deploy
+                </a>
+              </div>
+            </li>
+          <li class="experience-item modal" data-modal="minesweeper">
+            <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                 src="./assets/img/minesweeper.png"
+                 alt="CSS-trainer"
+                 width="600">
+              <figcaption>
+                Minesweeper
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">Minesweeper</h4>
+            <ul class="list features">
+              <li class="features-item">Dynamic rendering;</li>
+              <li class="features-item">DOM-evemts;</li>
+              <li class="features-item">Eslint;</li>
+              <li class="features-item">Light/Dark theme;</li>
+              <li class="features-item">Adaptive (tablet, mobile), liquid and semantic layout;</li>
+            </ul>
+              <div class="experience-links">
+                <a class="link pet-link"
+                  href="https://github.com/NataliaVozhdaeva/rss/tree/minesweeper"
+                  target="_blank"> Show github
+                </a>
+                <a class="link pet-link"
+                  href="https://nataliavozhdaeva.github.io/rss/minesweeper/"
+                  target="_blank"> Show deploy
+                </a>
+              </div>
+            </li>
+          <li class="experience-item modal" data-modal="trainer">
+            <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <figure class="figure">
+              <img class="experience-img"
+                 src="./assets/img/css-train.png"
+                 alt="CSS-trainer"
+                 width="600">
+              <figcaption>
+                CSS-trainer
+              </figcaption>
+            </figure>
+            <h4 class="pet-title">CSS-selector simulator</h4>
+            <ul class="list features">
+              <li class="features-item">TypeScript;</li>
+              <li class="features-item">Modules;</li>
+              <li class="features-item">Webpack;</li>
+              <li class="features-item">OOP;</li>
+              <li class="features-item">Adaptive (tablet, mobile), liquid and semantic layout;</li>
+            </ul>
+              <div class="experience-links">
+                <a class="link pet-link"
+                  href="https://github.com/NataliaVozhdaeva/rss/tree/rs-css"
+                  target="_blank"> Show github
+                </a>
+                <a class="link pet-link"
+                  href="https://nataliavozhdaeva.github.io/rss/rs-css/"
+                  target="_blank"> Show deploy
+                </a>
+              </div>
+            </li>
+          <li class="experience-item modal" data-modal="shelter">
+          <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+          </svg>
+          <figure class="figure">
+            <img class="experience-img"
+               src="./assets/img/shelter.png"
+               alt="Landing for shelter"
+               width="600">
+            <figcaption>
+              Shelter
+            </figcaption>
+          </figure>
+          <h4 class="pet-title">Landing for animal's shelter</h4>
+          <ul class="list features">
+            <li class="features-item">Popup for animal's cards;</li>
+            <li class="features-item">Neverending slider;</li>
+            <li class="features-item">Pagination;</li>
+            <li class="features-item">Mobile burger-menu;</li>
+            <li class="features-item">Adaptive (tablet, mobile), liquid and semantic layout;</li>
+          </ul>
+            <div class="experience-links">
+              <a class="link pet-link"
+                href="https://github.com/NataliaVozhdaeva/rss/tree/shelter"
+                target="_blank"> Show github
+              </a>
+              <a class="link pet-link"
+                href="https://nataliavozhdaeva.github.io/rss/shelter/"
+                target="_blank"> Show deploy
+              </a>
+            </div>
+          </li>
+
           <li class="experience-item modal"
               data-modal="plants">
             <svg class="modal__cross js-modal-close"
@@ -199,10 +324,7 @@
                     d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
             </svg>
             <figure class="figure">
-              <img class="experience-img"
-                   src="./assets/img/elite-fire.png"
-                   alt="Landing for fireplace for home"
-                   width="600">
+              <img class="experience-img" src="./assets/img/elite-fire.png" alt="Landing for fireplace for home"  width="600">
               <figcaption>
                 Elite fire
               </figcaption>
@@ -326,8 +448,7 @@
                 doesn't respond;
               </li>
               <li class="features-item">adding and deleting comments;</li>
-              <li class="features-item">you can filter and sort movies;</li>
-              <li class="features-item">you can create your own rating;</li>
+              <li class="features-item">you can filter and sort movies and create your own rating;</li>
               <li class="features-item">Moreover a fixed the academy's code.</li>
             </ul>
             <div class="experience-links">
@@ -634,7 +755,7 @@
             <h4 class="education-item-title">RSScool</h4>
             <p class="education-duration">12.2022 - right now</p>
             <p class="item-text education-text">
-              New skills will be here!!!
+              JavaScript, TypeScript, Async programming, ES6, React/Angular and other new skills will be here!
             </p>
           </li>
           <li class="education-item">
@@ -688,7 +809,7 @@
       </a>
       <div class="btn-container">
         <a class="link btn footer-btn downloadcv"
-           href="./assets/docs/Frontend_Natalia Vozhdaeva.pdf"
+           href="./assets/docs/Natalia_Vozhdaeva_frontend_en.pdf"
            target="_blank"
            download>Download CV in .pdf
         </a>

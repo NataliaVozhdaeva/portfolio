@@ -492,18 +492,18 @@ figcaption {
 
   border: none;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
-    rgba(0, 0, 0, 0.18) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px,
+    rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px, rgba(0, 0, 0, 0.18) 0px 32px 16px;
   overflow: hidden;
 
   cursor: pointer;
 }
 
 .experience-thumbnail:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
-    rgba(0, 0, 0, 0.18) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px,
+    rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px, rgba(0, 0, 0, 0.18) 0px 32px 16px;
 }
 
 .experience {
@@ -626,11 +626,13 @@ figcaption {
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   padding: 30px;
   transition: 0.3s all;
+  max-height: 90vh;
 }
 
 @media only screen and (max-width: 570px) {
   .modal {
     padding: 50px 30px;
+    font-size: 14px;
   }
 }
 

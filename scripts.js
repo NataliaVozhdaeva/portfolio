@@ -1,15 +1,19 @@
 //experience animation
 const experience = document.querySelector('.experience');
 const projecImgs = [
+  { data: 'minesweeper', src: './assets/img/minesweeper.png' },
+  { data: 'trainer', src: './assets/img/css-train.png' },
+  { data: 'shelter', src: './assets/img/shelter.png' },
   { data: 'plants', src: './assets/img/plants.png' },
-  { data: 'git-search', src: './assets/img/git-search.png' },
-  { data: 'elite-fire', src: './assets/img/elite-fire.png' },
-  { data: 'comments-form', src: './assets/img/comments-form.png' },
-  { data: 'bikes', src: './assets/img/bikes.png' },
+  { data: 'keyboard', src: './assets/img/keyboard.png' },
   { data: 'cinemaddict', src: './assets/img/cinemaddict.png' },
   { data: 'travel', src: './assets/img/travel.png' },
   { data: 'portfolio', src: './assets/img/screen2.png' },
   { data: 'design', src: './assets/img/design.png' },
+  { data: 'bikes', src: './assets/img/bikes.png' },
+  { data: 'git-search', src: './assets/img/git-search.png' },
+  { data: 'comments-form', src: './assets/img/comments-form.png' },
+  { data: 'elite-fire', src: './assets/img/elite-fire.png' },
   { data: 'levelup', src: './assets/img/levelup.png' },
   { data: 'watchStore', src: './assets/img/watchStore.jpg' },
   { data: 'JD', src: './assets/img/JD.png' },
