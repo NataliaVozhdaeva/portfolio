@@ -1,5 +1,1 @@
-# rsschool-cv
-
-https://nataliavozhdaeva.github.io/rsschool-cv
-
-https://nataliavozhdaeva.github.io/rsschool-cv/cv
+[Open in Browser](https://nataliavozhdaeva.github.io/portfolio/)
