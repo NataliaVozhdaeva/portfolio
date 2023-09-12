@@ -86,19 +86,19 @@ let lastScrollTop = 0;
 
 document.addEventListener('scroll', function () {
   let skillsPosition = {
-      top: window.pageYOffset + skillsContainer.getBoundingClientRect().top,
-      bottom: window.pageYOffset + skillsContainer.getBoundingClientRect().bottom,
+      top: window.scrollY + skillsContainer.getBoundingClientRect().top,
+      bottom: window.scrollY + skillsContainer.getBoundingClientRect().bottom,
     },
     windowPosition = {
-      top: window.pageYOffset,
-      bottom: window.pageYOffset + document.documentElement.clientHeight,
+      top: window.scrollY,
+      bottom: window.scrollY + document.documentElement.clientHeight,
     },
     experiencePosition = {
-      top: window.pageYOffset + experience.getBoundingClientRect().top,
-      bottom: window.pageYOffset + experience.getBoundingClientRect().bottom,
+      top: window.scrollY + experience.getBoundingClientRect().top,
+      bottom: window.scrollY + experience.getBoundingClientRect().bottom,
     };
 
-  let top = window.pageYOffset;
+  let top = window.scrollY;
 
   if (lastScrollTop < top) {
     if (skillsPosition.top - windowPosition.top < 10) {
