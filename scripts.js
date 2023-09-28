@@ -113,7 +113,7 @@ document.addEventListener('scroll', function () {
     }
 
     if (experiencePosition.top - windowPosition.top < 500) {
-      scale -= 0.03;
+      scale -= 0.04;
       scaledImg.style.transform = `scale(${scale})`;
       scaledImg.style.borderRadius = '15%';
       if (scale == 0.2 || scale < 0.2) {
