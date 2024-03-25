@@ -1,14 +1,15 @@
 //experience animation
 const experience = document.querySelector('.experience');
 const projecImgs = [
+  { data: 'pokemons', src: './assets/img/pokemons.png' },
   { data: 'minesweeper', src: './assets/img/minesweeper.png' },
   { data: 'trainer', src: './assets/img/css-train.png' },
   { data: 'shelter', src: './assets/img/shelter.png' },
   { data: 'plants', src: './assets/img/plants.png' },
   { data: 'keyboard', src: './assets/img/keyboard.png' },
   { data: 'cinemaddict', src: './assets/img/cinemaddict.png' },
-  { data: 'travel', src: './assets/img/travel.png' },
   { data: 'portfolio', src: './assets/img/screen2.png' },
+  { data: 'travel', src: './assets/img/travel.png' },
   { data: 'design', src: './assets/img/design.png' },
   { data: 'bikes', src: './assets/img/bikes.png' },
   { data: 'git-search', src: './assets/img/git-search.png' },
