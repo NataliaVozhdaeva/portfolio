@@ -29,6 +29,12 @@ html {
   color: #ffffff;
 }
 
+@media only screen and (max-width: 500px) {
+  .body {
+    font-size: 14px;
+  }
+}
+
 .link {
   text-decoration: none;
 
@@ -102,6 +108,12 @@ html {
 .section-title {
   text-transform: uppercase;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-title {
+    margin-bottom: 20px;
+  }
 }
 
 .header-container {
@@ -256,22 +268,52 @@ html {
   opacity: 1;
 }
 
-.skills-list,
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
 .languages-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 50px 30px;
-  height: 200px;
-  margin-bottom: 100px;
+  gap: 30px;
 }
 
-@media only screen and (max-width: 830px) {
-  .skills-list,
+.skills-item {
+  min-width: 20%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+    row-gap: 15px;
+  }
+
   .languages-list {
+    display: flex;
     flex-direction: row;
     height: auto;
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .skills-list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -425,8 +467,14 @@ figcaption {
 .btn-container {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 1300px) {
+  .btn-container {
+    flex-direction: row;
+  }
 }
 
 .aside {
@@ -445,6 +493,12 @@ figcaption {
   color: #000000;
 }
 
+@media only screen and (max-width: 1300px) {
+  .code {
+    display: none;
+  }
+}
+
 .aside-text {
   margin: 0;
 }
@@ -454,7 +508,7 @@ figcaption {
 }
 
 .footer-link {
-  align-self: center;
+  align-self: baseline;
 }
 
 .footer-btn {
@@ -484,6 +538,18 @@ figcaption {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .fixed {
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .fixed {
+    top: -130px;
+  }
+}
+
 .experience-thumbnail {
   width: 250px;
   height: 200px;
@@ -493,18 +559,18 @@ figcaption {
 
   border: none;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px,
-    rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px, rgba(0, 0, 0, 0.18) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
+    rgba(0, 0, 0, 0.18) 0px 32px 16px;
   overflow: hidden;
 
   cursor: pointer;
 }
 
 .experience-thumbnail:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px,
-    rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px, rgba(0, 0, 0, 0.18) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
+    rgba(0, 0, 0, 0.18) 0px 32px 16px;
 }
 
 .experience {
@@ -539,7 +605,6 @@ figcaption {
 .experience-title {
   position: absolute;
   top: 0;
-  left: 12em;
 }
 
 @media only screen and (max-width: 830px) {
