@@ -45,7 +45,7 @@ html {
   color: currentColor;
 }
 
-.link:focus {
+.link:focus:not(.footer-btn) {
   font-weight: bold;
 }
 
@@ -515,6 +515,7 @@ figcaption {
 .footer-btn {
   font-size: 18px;
   padding: 10px 20px;
+  box-sizing: border-box;
 
   background-color: var(--violet);
   background-image: none;
