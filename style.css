@@ -23,7 +23,8 @@ html {
   font-size: 18px;
 
   background: rgb(2, 0, 36);
-  background: linear-gradient(to top, var(--violet) 33.34%, rgba(67, 67, 67, 0)),
+  background:
+    linear-gradient(to top, var(--violet) 33.34%, rgba(67, 67, 67, 0)),
     radial-gradient(circle at center left, #2d005a 34.34%, rgba(67, 67, 67, 0) 100%),
     linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
   color: #ffffff;
@@ -467,7 +468,6 @@ figcaption {
 
 .btn-container {
   display: flex;
-  flex-direction: column;
   gap: 20px;
   justify-content: space-between;
 }
@@ -561,8 +561,14 @@ figcaption {
 
   border: none;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
+  box-shadow:
+    rgba(0, 0, 0, 0.34) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.3) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.12) 0px 2px 1px,
+    rgba(0, 0, 0, 0.18) 0px 4px 2px,
+    rgba(0, 0, 0, 0.18) 0px 8px 4px,
+    rgba(0, 0, 0, 0.18) 0px 16px 8px,
     rgba(0, 0, 0, 0.18) 0px 32px 16px;
   overflow: hidden;
 
@@ -570,8 +576,14 @@ figcaption {
 }
 
 .experience-thumbnail:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.12) 0px 2px 1px, rgba(0, 0, 0, 0.18) 0px 4px 2px, rgba(0, 0, 0, 0.18) 0px 8px 4px, rgba(0, 0, 0, 0.18) 0px 16px 8px,
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.12) 0px 2px 1px,
+    rgba(0, 0, 0, 0.18) 0px 4px 2px,
+    rgba(0, 0, 0, 0.18) 0px 8px 4px,
+    rgba(0, 0, 0, 0.18) 0px 16px 8px,
     rgba(0, 0, 0, 0.18) 0px 32px 16px;
 }
 
