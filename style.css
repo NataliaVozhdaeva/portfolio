@@ -743,6 +743,10 @@ figcaption {
   overflow: hidden;
 }
 
+#skills, #about, #experience, #education, #certification {
+  scroll-margin-top: 100px;
+}
+
 .burger {
   display: none;
   flex-direction: column;

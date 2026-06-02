@@ -82,6 +82,7 @@ let vh, expAbsTop, ANIM_START_Y, ANIM_DURATION, ANIM_END_Y;
 let computedStyleForSkills = getComputedStyle(skills);
 let currentOpacity = computedStyleForSkills.opacity;
 
+const aboutP = document.querySelector('.about p');
 const MIN_SCALE = 0.2;
 
 function initAnimation() {
@@ -146,11 +147,21 @@ document.addEventListener('scroll', function () {
 
   let top = window.scrollY;
 
+  if (navJumping) { lastScrollTop = top; return; }
+  const isMobile = window.innerWidth < 830;
+  const aboutPBottom = aboutP ? aboutP.getBoundingClientRect().bottom : null;
+  const fadeOutTrigger = isMobile
+    ? aboutPBottom !== null && aboutPBottom <= windowPosition.bottom - windowPosition.top
+    : skillsPosition.top - windowPosition.top < 10;
+  const fadeInTrigger = isMobile
+    ? aboutPBottom !== null && aboutPBottom > windowPosition.bottom - windowPosition.top
+    : skillsPosition.bottom - windowPosition.top > 630;
+
   if (lastScrollTop < top) {
-    if (skillsPosition.top - windowPosition.top < 10) {
+    if (fadeOutTrigger) {
       currentOpacity -= 0.02;
       skills.style.opacity = currentOpacity;
-      skills.classList.add('fixed');
+      if (!isMobile) skills.classList.add('fixed');
 
       if (currentOpacity < 0 || skillsPosition.bottom - windowPosition.top < 750) {
         currentOpacity = 0;
@@ -158,10 +169,10 @@ document.addEventListener('scroll', function () {
       }
     }
   } else {
-    if (skillsPosition.bottom - windowPosition.top > 630) {
+    if (fadeInTrigger) {
       currentOpacity += 0.02;
       skills.style.opacity = currentOpacity;
-      skills.classList.add('fixed');
+      if (!isMobile) skills.classList.add('fixed');
 
       if (currentOpacity > 1 || skillsPosition.top - windowPosition.top > 0) {
         currentOpacity = 1;
@@ -188,10 +199,17 @@ burger.addEventListener('click', () => {
   navList.classList.toggle('open');
 });
 
+let navJumping = false;
+
 navList.querySelectorAll('.navigation-link').forEach((link) => {
   link.addEventListener('click', () => {
     burger.classList.remove('open');
     navList.classList.remove('open');
+    currentOpacity = 1;
+    skills.style.opacity = 1;
+    skills.classList.remove('fixed');
+    navJumping = true;
+    setTimeout(() => { navJumping = false; }, 800);
   });
 });
 
