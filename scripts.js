@@ -1,6 +1,7 @@
 //experience animation
 const experience = document.querySelector('.experience');
 const projecImgs = [
+  { data: 'threejs', src: './assets/img/threejs.jpg' },
   { data: 'pokemons', src: './assets/img/pokemons.png' },
   { data: 'minesweeper', src: './assets/img/minesweeper.png' },
   { data: 'trainer', src: './assets/img/css-train.png' },
@@ -9,15 +10,14 @@ const projecImgs = [
   { data: 'keyboard', src: './assets/img/keyboard.png' },
   { data: 'cinemaddict', src: './assets/img/cinemaddict.png' },
   { data: 'portfolio', src: './assets/img/screen2.png' },
-  { data: 'travel', src: './assets/img/travel.png' },
-  { data: 'design', src: './assets/img/design.png' },
-  { data: 'bikes', src: './assets/img/bikes.png' },
-  { data: 'git-search', src: './assets/img/git-search.png' },
-  { data: 'comments-form', src: './assets/img/comments-form.png' },
+  // { data: 'travel', src: './assets/img/travel.png' },
+  // { data: 'design', src: './assets/img/design.png' },
+  // { data: 'bikes', src: './assets/img/bikes.png' },
+  // { data: 'git-search', src: './assets/img/git-search.png' },
+  // { data: 'comments-form', src: './assets/img/comments-form.png' },
   { data: 'elite-fire', src: './assets/img/elite-fire.png' },
-  { data: 'levelup', src: './assets/img/levelup.png' },
-  { data: 'watchStore', src: './assets/img/watchStore.jpg' },
-  { data: 'JD', src: './assets/img/JD.png' },
+  // { data: 'watchStore', src: './assets/img/watchStore.jpg' },
+  // { data: 'JD', src: './assets/img/JD.png' },
   { data: 'beautySalon', src: './assets/img/beautySalon.jpg' },
   { data: 'crm', src: './assets/img/crm.jpg' },
 ];
@@ -78,12 +78,55 @@ projecImgs.forEach((el, i) => {
 const skills = document.querySelector('#skills');
 const skillsContainer = document.querySelector('.skills-wrapper');
 const scaledImg = document.querySelector('.scaled-img');
+const scaledThumb = experience.querySelector('.scaled');
+
+// Направляем transform-origin точно на центр thumbnail (пока scale=1, трансформаций нет)
+if (scaledImg && scaledThumb) {
+  const imgRect = scaledImg.getBoundingClientRect();
+  const thumbRect = scaledThumb.getBoundingClientRect();
+  scaledImg.style.transformOrigin = `${thumbRect.left + thumbRect.width / 2 - imgRect.left}px ${thumbRect.top + thumbRect.height / 2 - imgRect.top}px`;
+}
 
 let computedStyleForSkills = getComputedStyle(skills);
 let currentOpacity = computedStyleForSkills.opacity;
 
-let scale = 1;
-let lastScrollTop = 0;
+// Позиционно-зависимая анимация: scale вычисляется из scrollY, а не инкрементально
+const MIN_SCALE = 0.2;
+const vh = document.documentElement.clientHeight;
+const expAbsTop = window.scrollY + experience.getBoundingClientRect().top;
+const ANIM_START_Y = expAbsTop - vh * 0.5;
+const ANIM_DURATION = vh * 0.8;
+const ANIM_END_Y = ANIM_START_Y + ANIM_DURATION;
+
+function computeScale(scrollY) {
+  if (scrollY <= ANIM_START_Y) return 1;
+  if (scrollY >= ANIM_END_Y) return MIN_SCALE;
+  return 1 - ((scrollY - ANIM_START_Y) / ANIM_DURATION) * (1 - MIN_SCALE);
+}
+
+function applyScaleState(s) {
+  if (!scaledImg || !scaledThumb) return;
+  if (s <= MIN_SCALE) {
+    scaledImg.style.transform = `scale(${MIN_SCALE})`;
+    scaledImg.style.borderRadius = '15%';
+    scaledThumb.style.visibility = '';
+    scaledImg.classList.add('non-display');
+  } else {
+    scaledImg.style.transform = `scale(${s})`;
+    scaledImg.style.borderRadius = s < 1 ? '15%' : '0';
+    scaledImg.classList.remove('non-display');
+    scaledThumb.style.visibility = 'hidden';
+  }
+}
+
+let animDone = false;
+
+// Применяем корректное состояние сразу при загрузке (в т.ч. при обновлении страницы)
+let scale = computeScale(window.scrollY);
+applyScaleState(scale);
+if (scale <= MIN_SCALE) animDone = true;
+
+let lastScrollTop = window.scrollY;
 
 document.addEventListener('scroll', function () {
   let skillsPosition = {
@@ -93,10 +136,6 @@ document.addEventListener('scroll', function () {
     windowPosition = {
       top: window.scrollY,
       bottom: window.scrollY + document.documentElement.clientHeight,
-    },
-    experiencePosition = {
-      top: window.scrollY + experience.getBoundingClientRect().top,
-      bottom: window.scrollY + experience.getBoundingClientRect().bottom,
     };
 
   let top = window.scrollY;
@@ -112,34 +151,42 @@ document.addEventListener('scroll', function () {
         skills.classList.remove('fixed');
       }
     }
-
-    if (experiencePosition.top - windowPosition.top < 500) {
-      scale -= 0.04;
-      scaledImg.style.transform = `scale(${scale})`;
-      scaledImg.style.borderRadius = '15%';
-      if (scale == 0.2 || scale < 0.2) {
-        experience.querySelector('.scaled').style.visibility = '';
-        scaledImg.classList.add('non-display');
-      }
-    }
   } else {
     if (skillsPosition.bottom - windowPosition.top > 630) {
       currentOpacity += 0.02;
       skills.style.opacity = currentOpacity;
       skills.classList.add('fixed');
-      scale = 1;
-      scaledImg.style.transform = `scale(${scale})`;
-      scaledImg.style.borderRadius = '0';
 
       if (currentOpacity > 1 || skillsPosition.top - windowPosition.top > 0) {
         currentOpacity = 1;
         skills.classList.remove('fixed');
-        scaledImg.classList.remove('non-display');
       }
     }
   }
 
+  if (!animDone) {
+    scale = computeScale(top);
+    applyScaleState(scale);
+    if (scale <= MIN_SCALE) animDone = true;
+  }
+
   lastScrollTop = top;
+});
+
+// burger menu
+const burger = document.querySelector('.js-burger');
+const navList = document.querySelector('.navigation-list');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navList.classList.toggle('open');
+});
+
+navList.querySelectorAll('.navigation-link').forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navList.classList.remove('open');
+  });
 });
 
 // lang change
