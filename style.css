@@ -433,6 +433,14 @@ figcaption {
   margin: 0 auto 100px;
 }
 
+@media only screen and (max-width: 615px) {
+  .education {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+
 .education-item {
   display: grid;
   column-gap: 30px;
@@ -456,6 +464,7 @@ figcaption {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    column-gap: 0;
   }
 
   .education-text {
@@ -781,17 +790,22 @@ figcaption {
   }
 
   .navigation-list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    gap: 12px;
-    padding: 16px 20px;
-    background-color: var(--deep-blue);
     z-index: 10;
+    position: absolute;
+    top: 150%;
+    left: 0;
+
+    display: none;
+
+    flex-direction: column;
+    gap: 24px;
+
+    width: 75vw;
+    max-width: 500px;
+    padding: 16px 20px;
+
+    background-color: var(--deep-blue);
+    border-radius: 12px;
   }
 
   .navigation-list.open {
